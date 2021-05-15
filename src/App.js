@@ -63,7 +63,7 @@ function App() {
               <a href="#contact" className="text-brown-100 font-semibold text-lg hover:text-yellow-400">CONTACT</a>
             </div>
           </div>
-          <div className="block lg:hidden px-2 z-40">
+          <div className="block lg:hidden px-2" style={{ zIndex:90 }}>
               <button className="py-2 px-2 items-center focus:outline-none" onClick={() => setShow((!
                 show) ? true : false)}>
                   <FontAwesomeIcon icon={["fas", "bars"]} color="#9f8483" size="lg" />
