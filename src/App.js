@@ -5,7 +5,7 @@ import './index.css';
 import myImg from '../src/img/me3.png';
 import myImg1 from '../src/img/me4.png';
 import html from '../src/img/html.png';
-import dots from '../src/img/dot.png';
+import dots from '../src/img/dot.svg';
 import css from '../src/img/css.png';
 import js from '../src/img/js.png';
 
@@ -13,12 +13,14 @@ import azzahra from '../src/img/azzahra.png';
 import kasihgold from '../src/img/kasihgold.png';
 import csccovid from '../src/img/csccovid.png';
 import mycomponent from '../src/img/mycomponent.png';
-import empk from '../src/img/empk.png';
+import room from '../src/img/homepage.png';
 import efms from '../src/img/efms.png';
 import emandate from '../src/img/emandate.png';
-import skate from '../src/img/skate.png';
+import blogr from '../src/img/blogr.png';
+import todo from '../src/img/todo.png';
 
 
+import Fade from 'react-reveal/Fade';
 import LightSpeed from 'react-reveal/LightSpeed';
 import Flip from 'react-reveal/Flip';
 import Zoom from 'react-reveal/Zoom';
@@ -38,6 +40,9 @@ import { fab } from "@fortawesome/free-brands-svg-icons"
 
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+
+
+import HamburgerMenu from 'react-hamburger-menu';
 
 
 
@@ -64,20 +69,27 @@ function App() {
             </div>
           </div>
           <div className="block lg:hidden px-2" style={{ zIndex:90 }}>
-              <button className="py-2 px-2 items-center focus:outline-none" onClick={() => setShow((!
-                show) ? true : false)}>
-                  <FontAwesomeIcon icon={["fas", "bars"]} color="#9f8483" size="lg" />
-              </button>
+            <HamburgerMenu
+              isOpen={show}
+              menuClicked={() => setShow((!show) ? true : false)}
+              width={30}
+              height={15}
+              strokeWidth={2}
+              rotate={0}
+              color='#9f8483'
+              borderRadius={0}
+              animationDuration={0.5}
+            />
             {show ?
 
-              <div className="bg-yellow-400 py-4 px-4 rounded-lg w-64 flex flex-col leading-9">
+              <div className="bg-yellow-400 py-4 px-4 rounded-lg w-64 flex flex-col leading-9 mt-4">
                 <a href="#about" className="text-white font-semibold">ABOUT ME</a>
                 <a href="#skills" className="text-white font-semibold">SKILLS</a>
                 <a href="#portfolio" className="text-white font-semibold">PORTFOLIO</a>
                 <a href="#contact" className="text-white font-semibold">CONTACT</a>
               </div>
-          :
-          null
+            :
+              null
             }
           </div>
         </div>
@@ -216,10 +228,10 @@ function App() {
               </LightSpeed>
               </div>
               <LightSpeed right>
-              <div className="col-span-12 sm:col-span-12 md:col-span-12 lg:col-span-6 xxl:col-span-6">
+              <div className="col-span-12 sm:col-span-12 md:col-span-12 lg:col-span-6 xxl:col-span-6 mt-0  lg:-mt-10">
                 <div className="flex space-x-4 mt-6">
                   <div className="w-32">
-                    <CircularProgressbarWithChildren value={70}
+                    <CircularProgressbarWithChildren value={60}
                       styles={buildStyles({
                         pathColor: "#ef6522",
                         trailColor: "white"
@@ -232,12 +244,12 @@ function App() {
                       />
 
                       <div className="text-xl text-white font-semibold text-center">
-                        <p>70%</p>
+                        <p>60%</p>
                       </div>
                     </CircularProgressbarWithChildren>
                   </div>
                   <div className="w-32">
-                    <CircularProgressbarWithChildren value={80}
+                    <CircularProgressbarWithChildren value={70}
                       styles={buildStyles({
                         pathColor: "#47a1d9",
                         trailColor: "white"
@@ -250,12 +262,12 @@ function App() {
                       />
 
                       <div className="text-xl text-white font-semibold text-center">
-                        <p>80%</p>
+                        <p>70%</p>
                       </div>
                     </CircularProgressbarWithChildren>
                   </div>
                   <div className="w-32">
-                    <CircularProgressbarWithChildren value={50}
+                    <CircularProgressbarWithChildren value={40}
                       styles={buildStyles({
                         pathColor: "#ebba1e",
                         trailColor: "white"
@@ -267,7 +279,7 @@ function App() {
                         alt="doge"
                       />
                       <div className="text-xl text-white font-semibold text-center">
-                        <p>50%</p>
+                        <p>40%</p>
                       </div>
                     </CircularProgressbarWithChildren>
                   </div>               
@@ -275,7 +287,7 @@ function App() {
                 <div className="pt-4">
                   <p className="text-white font-semibold text-lg">Front-end</p>
                   <div className="shadow w-full bg-white ">
-                    <div className="bg-yellow-400 text-xs leading-none py-1 text-center text-white" style={{ width: '70%' }}>70%</div>
+                    <div className="bg-yellow-400 text-xs leading-none py-1 text-center text-white" style={{ width: '60%' }}>60%</div>
                   </div>
                   <p className="text-white font-semibold pt-4 text-lg ">Back-end</p>
                   <div className="shadow w-full bg-white">
@@ -293,69 +305,77 @@ function App() {
           <div className="grid grid-cols-12 gap-6 relative justify-center container items-center ">
             <div className="col-span-12 sm:col-span-12 md:col-span-12 lg:col-span-12 xxl:col-span-12">
               <h1 className="text-4xl text-yellow-400 font-bold myfont mb-4">MY <span className="text-brown-900">PORTFOLIO</span></h1>
-              <Zoom>
+              <Fade left>
                 <div>
-                  <div className="grid gap-2  grid-cols-1 md:grid-cols-2 lg:grid-cols-4 sm:grid-cols-4">
+                  <div className="grid gap-2  grid-cols-1 md:grid-cols-2 lg:grid-cols-3 sm:grid-cols-3">
                     
-                    <a href="#" className="w-full bg-white shadow-lg rounded-lg overflow-hidden my-4 border-2 border-brown-900">
+                    <a href="https://www.myazzahra.com/portal/" target="_blank" className="w-full bg-white shadow-lg rounded-lg overflow-hidden my-4 border-2 border-brown-900">
                       <img className="w-full h-56 object-cover object-center" src={azzahra} alt="avatar" />
                       <div className="flex items-center px-6 py-3 bg-yellow-400">
                         <h1 className="mx-3 text-white font-semibold text-lg">Azzahra portal</h1>
                       </div>
                     </a>
 
-                    <a href="#" className="w-full bg-white shadow-lg rounded-lg overflow-hidden my-4 border-2 border-brown-900">
+                    <a href="https://cscabs.net.my/kasihgold" target="_blank" className="w-full bg-white shadow-lg rounded-lg overflow-hidden my-4 border-2 border-brown-900">
                       <img className="w-full h-56 object-cover object-center" src={kasihgold} alt="avatar" />
                       <div className="flex items-center px-6 py-3 bg-yellow-400">
                         <h1 className="mx-3 text-white font-semibold text-lg">Kasih Gold</h1>
                       </div>
                     </a>
 
-                    <a href="#" className="w-full bg-white shadow-lg rounded-lg overflow-hidden my-4 border-2 border-brown-900">
-                      <img className="w-full h-56 object-cover object-center" src={csccovid} alt="avatar" />
+                    <a href="https://cscabs.net.my/covid/" target="_blank" className="w-full bg-white shadow-lg rounded-lg overflow-hidden my-4 border-2 border-brown-900">
+                      <img className="w-full h-56 object-cover object-center" src={csccovid} alt="avatar"  />
                       <div className="flex items-center px-6 py-3 bg-yellow-400">
                         <h1 className="mx-3 text-white font-semibold text-lg">Covid Report</h1>
                       </div>
                     </a>
 
-                    <a href="#" className="w-full bg-white shadow-lg rounded-lg overflow-hidden my-4 border-2 border-brown-900">
+                    <a href="#" target="_blank" className="w-full bg-white shadow-lg rounded-lg overflow-hidden my-4 border-2 border-brown-900">
                       <img className="w-full h-56 object-cover object-center" src={efms} alt="avatar" />
                       <div className="flex items-center px-6 py-3 bg-yellow-400">
-                        <h1 className="mx-3 text-white font-semibold text-lg">E-fms</h1>
+                        <h1 className="mx-3 text-white font-semibold text-lg">Cscorp</h1>
                       </div>
                     </a>
 
-                    <a href="#" className="w-full bg-white shadow-lg rounded-lg overflow-hidden my-4 border-2 border-brown-900">
-                      <img className="w-full h-56 object-cover object-center" src={emandate} alt="avatar" />
+                    <a href="https://frontend-mentor-room-home-page.vercel.app/" target="_blank" className="w-full bg-white shadow-lg rounded-lg overflow-hidden my-4 border-2 border-brown-900">
+                      <img className="w-full h-56 object-cover object-center" src={room} alt="avatar" />
+                      <div className="flex items-center px-6 py-3 bg-yellow-400">
+                        <h1 className="mx-3 text-white font-semibold text-lg">Room Home Page</h1>
+                      </div>
+                    </a>
+
+                    <a href="https://fmsonline.tekun.gov.my/eMandateV2/logmasuk" target="_blank" className="w-full bg-white shadow-lg rounded-lg overflow-hidden my-4 border-2 border-brown-900">
+                      <img className="w-full h-56 object-cover object-center" src={emandate} alt="avatar"  />
                       <div className="flex items-center px-6 py-3 bg-yellow-400">
                         <h1 className="mx-3 text-white font-semibold text-lg">Emandate</h1>
                       </div>
                     </a>
 
-                    <a href="#" className="w-full bg-white shadow-lg rounded-lg overflow-hidden my-4 border-2 border-brown-900">
-                      <img className="w-full h-56 object-cover object-center" src={empk} alt="avatar" />
-                      <div className="flex items-center px-6 py-3 bg-yellow-400">
-                        <h1 className="mx-3 text-white font-semibold text-lg">E-mpk</h1>
-                      </div>
-                    </a>
 
-                    <a href="https://tailwindcomponents.com/u/safwanazman" className="w-full bg-white shadow-lg rounded-lg overflow-hidden my-4 border-2 border-brown-900">
-                      <img className="w-full h-56 object-cover object-center" src={mycomponent } alt="avatar" />
+                    <a href="https://tailwindcomponents.com/u/safwanazman" target="_blank" className="w-full bg-white shadow-lg rounded-lg overflow-hidden my-4 border-2 border-brown-900">
+                      <img className="w-full h-56 object-cover object-center" src={mycomponent} alt="avatar" />
                       <div className="flex items-center px-6 py-3 bg-yellow-400">
                         <h1 className="mx-3 text-white font-semibold text-lg">My Component</h1>
                       </div>
                     </a>
 
-                    <a href="#" className="w-full bg-white shadow-lg rounded-lg overflow-hidden my-4 border-2 border-brown-900">
-                      <img className="w-full h-56 object-cover object-center" src={skate} alt="avatar" />
+                    <a href="https://blogr-landing-page-pearl.vercel.app/" target="_blank" className="w-full bg-white shadow-lg rounded-lg overflow-hidden my-4 border-2 border-brown-900">
+                      <img className="w-full h-56 object-cover object-center" src={blogr} alt="avatar" />
                       <div className="flex items-center px-6 py-3 bg-yellow-400">
-                        <h1 className="mx-3 text-white font-semibold text-lg">Learn Skate</h1>
+                        <h1 className="mx-3 text-white font-semibold text-lg">blogr Page</h1>
+                      </div>
+                    </a>
+
+                    <a href="#" target="_blank" className="w-full bg-white shadow-lg rounded-lg overflow-hidden my-4 border-2 border-brown-900">
+                      <img className="w-full h-56 object-cover object-center" src={todo} alt="avatar" />
+                      <div className="flex items-center px-6 py-3 bg-yellow-400">
+                        <h1 className="mx-3 text-white font-semibold text-lg">Todo List</h1>
                       </div>
                     </a>
                     
                   </div>
                 </div>
-              </Zoom>
+              </Fade>
             </div>
           </div>
         </div>
