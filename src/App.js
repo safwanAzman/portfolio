@@ -366,7 +366,7 @@ function App() {
                       </div>
                     </a>
 
-                    <a href="https://todo-list-frontend-g0rt49edt-safwanazman.vercel.app/" target="_blank" className="w-full my-4 overflow-hidden bg-white border-2 rounded-lg shadow-lg border-brown-900">
+                    <a href="https://todolist.safwan-azman.ml/" target="_blank" className="w-full my-4 overflow-hidden bg-white border-2 rounded-lg shadow-lg border-brown-900">
                       <img className="object-cover object-center w-full h-56" src={todo} alt="avatar" />
                       <div className="flex items-center px-6 py-3 bg-yellow-400">
                         <h1 className="mx-3 text-lg font-semibold text-white">Todo List</h1>
