@@ -18,13 +18,14 @@ import efms from '../src/img/efms.png';
 import emandate from '../src/img/emandate.png';
 import blogr from '../src/img/blogr.png';
 import todo from '../src/img/todo.png';
+import arrahnu from '../src/img/arrahnu.png';
+import csctestkit from '../src/img/csctestkit.png';
+import jomskate from '../src/img/jomskate.png';
 
 
 import Fade from 'react-reveal/Fade';
 import LightSpeed from 'react-reveal/LightSpeed';
-import Flip from 'react-reveal/Flip';
 import Zoom from 'react-reveal/Zoom';
-import Tada from 'react-reveal/Tada';
 
 import {
   CircularProgressbarWithChildren,
@@ -154,7 +155,7 @@ function App() {
                         <FontAwesomeIcon icon={["fas", "clock"]} color="#fbbf25" size="3x"/>
                       </div>
                       <div className="mt-4"> 
-                        <h1 className="text-4xl text-center myfont text-brown-900">8760</h1>
+                        <h1 className="text-4xl text-center myfont text-brown-900">17520</h1>
                         <h1 className="text-sm text-center myfont text-brown-900 md:text-lg">Hour of Work</h1>
                       </div>
                     </div>
@@ -167,7 +168,7 @@ function App() {
                         <FontAwesomeIcon icon={["fas", "lightbulb"]} color="#ffffff" size="3x" />
                       </div>
                       <div className="mt-4">
-                        <h1 className="text-4xl text-center myfont text-brown-900">1</h1>
+                        <h1 className="text-4xl text-center myfont text-brown-900">2</h1>
                         <h1 className="text-sm text-center myfont text-brown-900 md:text-lg">Year of Experience</h1>
                       </div>
                     </div>
@@ -310,21 +311,21 @@ function App() {
                   <div className="grid grid-cols-1 gap-2 md:grid-cols-2 lg:grid-cols-3 sm:grid-cols-3">
                     
                     <a href="https://www.myazzahra.com/portal/" target="_blank" className="w-full my-4 overflow-hidden bg-white border-2 rounded-lg shadow-lg border-brown-900">
-                      <img className="object-cover object-center w-full h-56" src={azzahra} alt="avatar" />
+                      <img className="object-center w-full h-56" src={azzahra} alt="avatar" />
                       <div className="flex items-center px-6 py-3 bg-yellow-400">
                         <h1 className="mx-3 text-lg font-semibold text-white">Azzahra portal</h1>
                       </div>
                     </a>
 
                     <a href="https://cscabs.net.my/kasihgold" target="_blank" className="w-full my-4 overflow-hidden bg-white border-2 rounded-lg shadow-lg border-brown-900">
-                      <img className="object-cover object-center w-full h-56" src={kasihgold} alt="avatar" />
+                      <img className="object-center w-full h-56" src={kasihgold} alt="avatar" />
                       <div className="flex items-center px-6 py-3 bg-yellow-400">
                         <h1 className="mx-3 text-lg font-semibold text-white">Kasih Gold</h1>
                       </div>
                     </a>
 
                     <a href="https://cscabs.net.my/covid/" target="_blank" className="w-full my-4 overflow-hidden bg-white border-2 rounded-lg shadow-lg border-brown-900">
-                      <img className="object-cover object-center w-full h-56" src={csccovid} alt="avatar"  />
+                      <img className="object-center w-full h-56" src={csccovid} alt="avatar"  />
                       <div className="flex items-center px-6 py-3 bg-yellow-400">
                         <h1 className="mx-3 text-lg font-semibold text-white">Covid Report</h1>
                       </div>
@@ -338,14 +339,14 @@ function App() {
                     </a>
 
                     <a href="https://frontend-mentor-room-home-page.vercel.app/" target="_blank" className="w-full my-4 overflow-hidden bg-white border-2 rounded-lg shadow-lg border-brown-900">
-                      <img className="object-cover object-center w-full h-56" src={room} alt="avatar" />
+                      <img className="object-center w-full h-56" src={room} alt="avatar" />
                       <div className="flex items-center px-6 py-3 bg-yellow-400">
                         <h1 className="mx-3 text-lg font-semibold text-white">Room Home Page</h1>
                       </div>
                     </a>
 
                     <a href="https://fmsonline.tekun.gov.my/eMandateV2" target="_blank" className="w-full my-4 overflow-hidden bg-white border-2 rounded-lg shadow-lg border-brown-900">
-                      <img className="object-cover object-center w-full h-56" src={emandate} alt="avatar"  />
+                      <img className="object-center w-full h-56" src={emandate} alt="avatar"  />
                       <div className="flex items-center px-6 py-3 bg-yellow-400">
                         <h1 className="mx-3 text-lg font-semibold text-white">Emandate</h1>
                       </div>
@@ -353,23 +354,44 @@ function App() {
 
 
                     <a href="https://tailwindcomponents.com/u/safwanazman" target="_blank" className="w-full my-4 overflow-hidden bg-white border-2 rounded-lg shadow-lg border-brown-900">
-                      <img className="object-cover object-center w-full h-56" src={mycomponent} alt="avatar" />
+                      <img className="object-center w-full h-56" src={mycomponent} alt="avatar" />
                       <div className="flex items-center px-6 py-3 bg-yellow-400">
                         <h1 className="mx-3 text-lg font-semibold text-white">My Component</h1>
                       </div>
                     </a>
 
                     <a href="https://blogr-landing-page-pearl.vercel.app/" target="_blank" className="w-full my-4 overflow-hidden bg-white border-2 rounded-lg shadow-lg border-brown-900">
-                      <img className="object-cover object-center w-full h-56" src={blogr} alt="avatar" />
+                      <img className="object-center w-full h-56" src={blogr} alt="avatar" />
                       <div className="flex items-center px-6 py-3 bg-yellow-400">
                         <h1 className="mx-3 text-lg font-semibold text-white">blogr Page</h1>
                       </div>
                     </a>
 
                     <a href="https://todolist.safwan-azman.ml/" target="_blank" className="w-full my-4 overflow-hidden bg-white border-2 rounded-lg shadow-lg border-brown-900">
-                      <img className="object-cover object-center w-full h-56" src={todo} alt="avatar" />
+                      <img className="object-center w-full h-56" src={todo} alt="avatar" />
                       <div className="flex items-center px-6 py-3 bg-yellow-400">
                         <h1 className="mx-3 text-lg font-semibold text-white">Todo List</h1>
+                      </div>
+                    </a>
+
+                    <a href="http://175.144.132.172/arrahnu/" target="_blank" className="w-full my-4 overflow-hidden bg-white border-2 rounded-lg shadow-lg border-brown-900">
+                      <img className="object-center w-full h-56 " src={arrahnu} alt="avatar" />
+                      <div className="flex items-center px-6 py-3 bg-yellow-400">
+                        <h1 className="mx-3 text-lg font-semibold text-white">Arrahnu</h1>
+                      </div>
+                    </a>
+
+                    <a href="#"  className="w-full my-4 overflow-hidden bg-white border-2 rounded-lg shadow-lg border-brown-900">
+                      <img className="object-center w-full h-56 " src={csctestkit} alt="avatar" />
+                      <div className="flex items-center px-6 py-3 bg-yellow-400">
+                        <h1 className="mx-3 text-lg font-semibold text-white">Csc Testkit</h1>
+                      </div>
+                    </a>
+
+                    <a href="#" className="w-full my-4 overflow-hidden bg-white border-2 rounded-lg shadow-lg border-brown-900">
+                      <img className="object-center w-full h-56 " src={jomskate} alt="avatar" />
+                      <div className="flex items-center px-6 py-3 bg-yellow-400">
+                        <h1 className="mx-3 text-lg font-semibold text-white">Jom Skate</h1>
                       </div>
                     </a>
                     
